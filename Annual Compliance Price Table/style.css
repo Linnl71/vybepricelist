@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+
+/*For squarespace removing of padding and expanding out the whole width START*/
+
+#accounting-corporate-secretarial-price-packages .sqs-block.spacer-block.sqs-block-spacer.sized.vsize-1 {
+  display:none;
+}
+
+#accounting-corporate-secretarial-price-packages .col.sqs-col-10.span-10 {
+  width:100%;
+}
+
+#accounting-corporate-secretarial-price-packages .Index-page-content {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/*For squarespace removing of padding and expanding out the whole width end*/
+
+/******* Main *******/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  /*border: 1px solid black;*/
+}
+
+/*body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #2d2d2d;
+}*/
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+h2 {
+  padding-bottom: 10px;
+  word-wrap: break-word;
+  font-weight: 700;
+}
+
+li {
+  list-style-type: none;
+}
+
+small {
+  display: block;
+}
+
+/*main {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+}*/
+
+#content1, #content2, #content3, #content4, #content5 {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label:after {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+label[for*='1']:before { content: '\f135'; }
+label[for*='2']:before { content: '\f02d'; }
+label[for*='3']:before { content: '\f155'; }
+label[for*='4']:before { content: '\f046'; }
+label[for*='5']:before { content: '\f005'; }
+label[for*='5']:after { content: '\f005'; }
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label, input:checked + .popular label {
+  color: #555;
+  /*border: 1px solid #ddd;*/
+  /*border-top: 4px solid #AA0000;*/
+  border-bottom: 4px solid #AA0000;
+}
+
+input:checked + .popular::before, input:checked + .popular::after {
+  color: #555;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+  display: block !important;
+  z-index: 100;
+  opacity: 1;
+  transition: all ease-out 0.2s 0.1s;
+}
+
+/******* Contents *******/
+
+.price {
+  display:inline-block;
+}
+
+.popular {
+  display: inline-block;
+  position: relative;
+}
+
+.firstRow, .secondRow .thirdRow .forthRow{
+  list-style-type: none;
+}
+
+.firstRow::after, .secondRow::after {
+  display:block;
+  clear: both;
+  content: '';
+}
+
+.contentCards:hover, .contentCards:hover h3, .contentCards:hover h2{
+  color:white;
+  background: #840000;
+}
+
+#content1 li:hover .specialbtn, #content1 li:hover .specialbtn a, #content2 li:hover .specialbtn, #content2 li:hover .specialbtn a, #content3 li:hover .specialbtn, #content3 li:hover .specialbtn a
+, #content4 li:hover .specialbtn, #content4 li:hover .specialbtn a, #content5 li:hover .specialbtn, #content5 li:hover .specialbtn a {
+  background-color: white;
+  color: #840000;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width:1051px){
+
+  #content1 li:nth-child(2), #content2 li:nth-child(2), #content3 li:nth-child(2), #content4 li:nth-child(2), #content5 li:nth-child(2)
+  {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.contentCards {
+  float:left;
+  width: calc((100% - 60px)/3);
+  height: auto;
+  background-color: #eee;
+  padding: 20px;
+  position:relative;
+  /*overflow: scroll;*/
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+#content5 .contentCards {
+  height: auto;
+}
+
+#content2 .contentCards, #content5 .contentCards {
+  width: calc((100% - 60px)/2);
+}
+
+#content3 .contentCards {
+  min-height: 200px;
+}
+
+.subtabs {
+  display: inline-block;
+  border-top: 2px #840000 solid;
+  border-bottom: 2px #840000 solid;
+  color: #2d2d2d;
+  font-size: 30px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.specialbtn {
+  display: block;
+  border: 1px solid #840000;
+  max-width: 100px;
+  padding: 0.35em;
+  background: #840000;
+  cursor: pointer;
+  border-radius: 2em;
+  margin: 10px 0px;
+  left: 0;
+  position: relative;
+}
+
+ul.subdetails {
+  display: list-item;
+  list-style-type: circle;
+  list-style-position: outside;
+  margin: 10px;
+  margin-left: 20px;
+    /*line-height: 1.5rem;*/
+}
+
+/*.subdetails::before {
+  content:'- ';
+  position: absolute;
+  left: 20px;
+}*/
+
+.specialbtn a {
+  text-decoration: none;
+  color: white;
+  text-align: center !important;
+  padding: 0px;
+  display:block;
+}
+
+.specialbtn:hover, .specialbtn:hover a {
+  background-color: #EBEBEB;
+  border-radius: 20px;
+}
+
+/*#content1 .contentCards:hover, #content2 li:hover, #content3 li:hover, #content4 li:hover {
+  background-color: #840000;
+  display:block;
+}*/
+
+/******* Collapsing the Column ********/
+@media only screen and (max-width:1050px){
+  .contentCards, #content2 .contentCards, #content5 .contentCards {
+    clear:both;
+    display:inline-block;
+    width:100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+li.contentCards {
+    margin-left:0px;
+    margin-right:0px;
+  }
+
+}
+
+/******* Collapsing the Column END ********/
+
+@media only screen and (max-width:900px){
+
+  #accounting-corporate-secretarial-price-packages .Index-page-content {
+    padding-left: 2em;
+    padding-right: 2em;
+
+  }
+}
+/************ For Phones & Small Devices when Tabs becomes Block **********/
+@media screen and (max-width: 650px) {
+  /*label {
+    font-size: 0;
+  }*/
+  label:before {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  label {
+    display: block;
+    background: #F7F7F7;
+    font-size: 14px;
+    border: 1px solid #bbb;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  label:before, label:after {
+    font-size: 14px;
+  }
+
+  input:checked + label, input:checked + .popular label {
+    color: white;
+    background: #840000;
+    border: 1px solid #840000;
+}
+
+  .popular {
+    display: block;
+    width: 100%;
+  }
+
+  .contentCards {
+    background: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+  }
+
+  .contentCards:hover, .contentCards:hover h3 {
+    color:#2d2d2d;
+    background: transparent;
+  }
+
+  .contentCards:hover h2 {
+    color:#840000;
+    background: transparent;
+  }
+
+  #content1 li:hover .specialbtn, #content1 li:hover .specialbtn a, #content2 li:hover .specialbtn, #content2 li:hover .specialbtn a, #content3 li:hover .specialbtn, #content3 li:hover .specialbtn a
+  , #content4 li:hover .specialbtn, #content4 li:hover .specialbtn a, #content5 li:hover .specialbtn, #content5 li:hover .specialbtn a {
+    background-color: #840000;
+    color: white;
+    border-radius: 20px;
+  }
+
+  .specialbtn:hover, .specialbtn:hover a {
+    background-color: transparent;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
